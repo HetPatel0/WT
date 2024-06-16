@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pallindrome</title>
+</head>
+<body>
+  <script>
+      let n = parseInt(prompt("Enter a number"));
+      let temp = n;
+      let reverseNum =0;
+      while(temp!=0) {
+          let  digit = parseInt(temp%10);
+          reverseNum= reverseNum *10 +digit;
+          temp=parseInt(temp/10);
+
+      }
+
+      if(n == reverseNum) {
+          document.write("No is pallindrome");
+      }
+      else{
+          document.write("Not a pallindrome");
+      }
+  </script>
+
+</body>
+</html>
