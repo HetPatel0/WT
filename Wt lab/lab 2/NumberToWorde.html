@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n =  prompt("Enter a number");
+       
+        if(n== " " || n == NaN) {
+        	document.write("Enter a number ");
+
+        }
+        if (n>999 || n< 0 ) {
+        	document.write("Out of bound");
+        }
+        else {
+        	 var units = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight','nine'];
+        var teens = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+        var tens = ['','','twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninty'];
+        var result=" ";
+
+        if (n>=100 ){
+        	result += units[Math.floor(n/100)] + "Hundred";
+        	n=n%100;
+        }
+         if(n>=20 ){
+        	result += tens[Math.floor(n/10)];
+        	n=n%10;
+        }
+        if (n>=10) {
+        	result+= teens[Maths.floor(n)];
+        	n =0;
+        }
+        if (n>0) {
+        	result += units[n];
+        }
+document.write(result);
+
+
+        }
+    </script>
+</body>
+</html>
