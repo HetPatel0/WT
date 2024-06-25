@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let a = [
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "813.00",
+    "proudcrt": "Sausages",
+    "id": "1"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "720.00",
+    "proudcrt": "Shirt",
+    "id": "2"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "836.00",
+    "proudcrt": "Bacon",
+    "id": "3"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "995.00",
+    "proudcrt": "Gloves",
+    "id": "4"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "606.00",
+    "proudcrt": "Shirt",
+    "id": "5"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "209.00",
+    "proudcrt": "Shirt",
+    "id": "6"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "629.00",
+    "proudcrt": "Computer",
+    "id": "7"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "651.00",
+    "proudcrt": "Chips",
+    "id": "8"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "539.00",
+    "proudcrt": "Table",
+    "id": "9"
+  },
+  {
+    "avatar": "https://loremflickr.com/640/480/business",
+    "price": "700.00",
+    "proudcrt": "Mouse",
+    "id": "10"
+  }
+]
+       
+         document.write("<table border='1'>")
+        for ( prd of a ){
+        document.write("<tr>")
+        document.write('<td>' +  prd.proudcrt +  '</td>');
+        document.write('<td>'+  "<img src="+prd.avatar + ">" + '</td>')
+        document.write('<td>' + prd.price + '</td>');
+        document.write("<br> <br>");
+        document.write("</tr>")
+
+       }
+       document.write("</table>")
+       </script>
+</body>
+</html>
