@@ -1,0 +1,70 @@
+<!-- // first child and last child concept in next lab    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+            <input type="text" id="txtarea" >
+            </td>
+            
+        </tr>
+        <tr>
+        
+         <td><button class="btn btn-danger " onclick="allclear()">ac</button></td>
+         <td><button class="btn btn-danger " onclick="del()">DEL</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-primary" onclick="display('7')">7</button></td>
+            <td><button class="btn btn-primary" onclick="display('8')">8</button></td>
+            <td><button class="btn btn-primary" onclick="display('9')">9</button></td>
+            <td><button class="btn btn-primary" onclick="display('/')">/</button></td>
+        </tr>
+        <tr >
+            <td><button class="btn btn-primary" onclick="display('4')">4</button></td>
+            <td><button class="btn btn-primary" onclick="display('5')">5</button></td>
+            <td><button class="btn btn-primary" onclick="display('6')">6</button></td>
+            <td><button class="btn btn-primary" onclick="display('*')">*</button></td>
+            
+        </tr>
+        <tr >
+            <td><button class="btn btn-primary" onclick="display('3')">3</button></td>
+            <td><button class="btn btn-primary" onclick="display('2')">2</button></td>
+            <td><button class="btn btn-primary" onclick="display('1')">1</button></td>
+            <td><button class="btn btn-primary" onclick="display('-')">-</button></td>
+            
+        </tr>
+        <tr >
+            <td><button class="btn btn-primary" onclick="display('0')">0</button></td>
+            <td><button class="btn btn-primary" onclick="display('.')">.</button></td>
+            <td><button class="btn btn-primary" onclick="res()">=</button></td>
+            <td><button class="btn btn-primary" onclick="display('+')">+</button></td>
+            
+        </tr>
+    </table>
+
+    <script>
+       function res() {
+       document.getElementById("txtarea").value = eval(document.getElementById("txtarea").value)
+       }
+
+       
+        function allclear() {
+            document.getElementById('txtarea').value = " ";
+        }
+        function display(v) {
+            document.getElementById('txtarea').value += v;
+        }
+        function del(){
+            document.getElementById('txtarea').value = (Math.floor( document.getElementById('txtarea').value/10))
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button type="submit" onclick="auto() " style="width: 100px; height: 100px;">Start</button>
+    <button type="submit" onclick="stop() " style="width: 100px; height: 100px;">stop</button>
+
+        
+
+    
+
+
+    <script>
+       
+        function start() {
+            var r= Math.random()*255;
+            var g= Math.random()*255;
+            var b= Math.random()*255;
+            document.body.style.backgroundColor = "rgb("+r+""+g+","+b+")";
+              
+           
+        } 
+        function auto(){
+         w =  setInterval(start,1000);    
+            
+        }
+        
+       function stop()
+        {
+         clearInterval(w);
+        }
+
+    </script>
+</body>
+</html>
