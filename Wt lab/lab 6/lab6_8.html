@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #heading {
+    }
+  </style>
+  <body>
+    <div id="heading" onmousemove="move()" onmouseout="out()">Heading</div>
+    <button id="green" onclick="green()">green</button>
+
+    <button id="red" onclick="red()">red</button>
+    <button onclick="time()">time</button>
+
+    <script>
+      move = () => {
+        document.getElementById("heading").style.color = "yellow";
+      };
+      out = () => {
+        document.getElementById("heading").style.color = "black";
+      };
+      green = () => {
+        document.getElementById("green").style.backgroundColor = "green";
+      };
+      red = () => {
+        document.getElementById("red").style.backgroundColor = "red";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse event</title>
+  </head>
+  <body>
+    <button onclick="clicke()">onclick</button>
+    <button ondblclick="dblclick()">ondblclick</button>
+    <button onmousedown="mousedown()">onmousedown</button>
+    <button onmousemove="mousemove()">onmousemove</button>
+    <button onmouseover="mouseover()">onmouseover</button>
+    <button onmouseout="mouseout()">onmouseout</button>
+    <button onmouseup="mouseup()">onmouseup</button>
+    <script>
+      clicke = () => {
+        alert("click event is called");
+      };
+      dblclick = () => {
+        alert("dblclick event is called");
+      };
+      mousedown = () => {
+        alert("mousedown event is called");
+      };
+      mousemove = () => {
+        alert("mousemove event is called");
+      };
+      mouseover = () => {
+        alert("mouseover event is called");
+      };
+      mouseout = () => {
+        alert("mouseout event is called");
+      };
+      mouseup = () => {
+        alert("mouseup event is called");
+      };
+    </script>
+  </body>
+</html>
