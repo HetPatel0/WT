@@ -6,29 +6,36 @@
     <title>Document</title>
   </head>
   <style>
-    #heading {
-    }
+ 
   </style>
   <body>
-    <div id="heading" onmousemove="move()" onmouseout="out()">Heading</div>
-    <button id="green" onclick="green()">green</button>
-
-    <button id="red" onclick="red()">red</button>
-    <button onclick="time()">time</button>
-
-    <script>
-      move = () => {
-        document.getElementById("heading").style.color = "yellow";
-      };
-      out = () => {
-        document.getElementById("heading").style.color = "black";
-      };
-      green = () => {
-        document.getElementById("green").style.backgroundColor = "green";
-      };
-      red = () => {
-        document.getElementById("red").style.backgroundColor = "red";
-      };
-    </script>
+    <h1 id="head">Heading Tag</h1>
+    <button onclick="dateTime()">fndtime</button>
+    <p id="dateAndTime"></p>
+    <button onclick="changeToRed()">red</button>
+    <button onclick="changeToGreen()">green</button>
+  <script type="text/javascript">
+    document.getElementById('head').addEventListener('mouseover',() =>{
+      document.getElementById('head').style.color = "yellow";
+    });
+    document.getElementById('head').addEventListener('mouseout',() =>{
+      document.getElementById('head').style.color = "black";
+    });
+    function dateTime(){
+      d = new Date();
+      if(document.getElementById('dateAndTime').innerHTML == d){
+        document.getElementById('dateAndTime').innerHTML = "";
+      }
+      else{
+        document.getElementById('dateAndTime').innerHTML = d;
+      }
+    }
+    function changeToGreen(){
+      document.body.style.backgroundColor = "green";
+    }
+    function changeToRed(){
+      document.body.style.backgroundColor = "red";
+    }
+  </script>
   </body>
 </html>
