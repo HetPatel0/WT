@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #353535ea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+     
+
+        /* Container styling */
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Input styling */
+        input[type="text"] {
+            width: calc(50% - 40px); /* Adjusting input width */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Button styling */
+        button {
+            margin : 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Display area styling */
+        #displayarea {
+            margin-top: 20px;
+            color:rgb(251, 250, 253);
+        }
+
+        .item {
+            background-color: #f9f9f9;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .item button {
+            padding: 8px 12px;
+            font-size: 14px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .item button:hover {
+            background-color: #e5e5e5;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="text" id="name">
+    <button id="add/edit" onclick="btn()">Add</button>
+    <div id="displayarea"></div>
+
+    <script>
+        let btn1 = document.getElementById('add/edit');
+        let arr =[];
+        let index;
+        function btn() {
+            if(btn1.innerHTML == 'Add'){
+              arr.push( document.getElementById('name').value) ;
+              document.getElementById('name').value= "";
+              display();
+        }
+        else{
+            let name = document.getElementById('name');
+            arr[index]= name.value;
+            name.value= "";
+            display();
+            btn1.innerHTML="Add";
+
+        }
+
+
+        }
+            
+        function display() {
+            let dis = document.getElementById('displayarea');
+            dis.innerHTML = "";
+            for( let i=0;i<arr.length;i++) {
+                dis.innerHTML +=arr[i]  +
+                "<button onclick ='del("+i+")'>Delete</button>" +
+                "<button onclick ='edit("+i+")'>Edit</button>" +
+                    "<br>";
+
+            }
+        }
+        function edit(i) {
+            document.getElementById('name').value = arr[i];
+            btn1.innerHTML= "Edit"; 
+            index = i;
+        }
+
+        function del(i) {
+            arr.splice(i,1)
+            display();
+
+        }
+        
+    </script>
+</body>
+</html>
