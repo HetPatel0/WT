@@ -1,0 +1,128 @@
+/* Background and Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Titles and Text */
+.intro-title {
+  font-size: 3em;
+  color: #2b6cb0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.intro-subtitle {
+  font-size: 1.5em;
+  color: #2c5282;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.intro-description {
+  font-size: 1.2em;
+  color: #4a5568;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* Skills Section */
+.skills {
+  margin-bottom: 30px;
+}
+
+.skills h2 {
+  font-size: 1.8em;
+  color: #2b6cb0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2b6cb0;
+  display: inline-block;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills ul li {
+  background-color: #ebf8ff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #2b6cb0;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact h2 {
+  font-size: 1.8em;
+  color: #2b6cb0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2b6cb0;
+  display: inline-block;
+}
+
+.contact p {
+  font-size: 1.2em;
+  color: #4a5568;
+  margin: 10px 0;
+}
+
+.contact a {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.contact a:hover {
+  color: #2b6cb0;
+  text-shadow: 0px 0px 5px rgba(43, 108, 176, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 20px;
+  }
+
+  .intro-title {
+    font-size: 2.2em;
+  }
+
+  .intro-subtitle {
+    font-size: 1.3em;
+  }
+
+  .intro-description {
+    font-size: 1em;
+  }
+
+  .skills h2, .contact h2 {
+    font-size: 1.5em;
+  }
+}
