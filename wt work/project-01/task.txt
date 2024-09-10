@@ -1,0 +1,13 @@
+Creating rest api which deal with JSON format
+
+
+get /users  - list all users
+
+get /users/1   - get the user with id 1
+get /users/2   - get the user with id 2
+
+post / users - create a new user
+
+patch /users/id - edit that particular id
+
+delete /users/id - delete that particular id
