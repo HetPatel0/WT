@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://hetp5852:patelhet123@cluster0.qwpgm.mongodb.net/
         const ans = await cli.save();
         res.send(ans);
 
-    })
+    }) 
 
     app.route("/clients/:id").get(async (req, res) => { // get element by id
         const clients = await Clients.findOne({ _id: req.params.id });
